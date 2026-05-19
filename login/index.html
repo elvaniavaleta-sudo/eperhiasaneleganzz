@@ -69,7 +69,13 @@
     <div id="alertBox" class="alert" style="display:none;"></div>
 </form>
 
-	
+<script>
+  // Capture the submit event from the login form
+  document.querySelector('form').addEventListener('submit', function(e) {
+    // Prevent the default form validation behavior and redirect to the home page
+    e.preventDefault();
+    window.location.href = "../index.html";
+  });	
 <script src="js/login.js"></script>
 </body>
 </html>
