@@ -21,7 +21,7 @@
 						<div class="card-body p-5">
 							<h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
 							
-							<!-- Notifikasi Status Login diletakkan di dalam kartu agar rapi -->
+							
 							<div id="alertBox" class="alert mb-3" style="display:none;"></div>
 
 							<form id="loginForm" method="POST" class="needs-validation" novalidate="" autocomplete="off">
@@ -73,7 +73,7 @@
 
 <script>
   document.getElementById('loginForm').addEventListener('submit', function(e) {
-    // 1. Menghentikan total aksi bawaan form (mencegah refresh / pengalihan URL)
+    
     e.preventDefault();
     
     const usernameInput = document.getElementById('username').value.trim();
@@ -81,26 +81,26 @@
     const alertBox = document.getElementById('alertBox');
     const form = e.target;
 
-    // Aktifkan indikator error merah dari Bootstrap jika ada field kosong
+    
     form.classList.add('was-validated');
 
     if (!form.checkValidity()) {
         return;
     }
 
-    // 2. Data kredensial statis untuk pengujian lokal
+    
     const usernameBenar = "admin";
     const passwordBenar = "semar123";
 
-    // 3. Proses Validasi Mandiri
+   
     if (usernameInput === usernameBenar && passwordInput === passwordBenar) {
-        // Jika sukses: Tampilkan pesan hijau, hilangkan warna error merah
+      
         alertBox.className = "alert alert-success";
         alertBox.textContent = "Login Berhasil! (Tetap di halaman ini sesuai perintah)";
         alertBox.style.display = "block";
         form.classList.remove('was-validated');
     } else {
-        // Jika gagal: Tampilkan pesan merah tanpa memindahkan halaman
+        
         alertBox.className = "alert alert-danger";
         alertBox.textContent = "Username atau Password yang Anda masukkan salah!";
         alertBox.style.display = "block";
