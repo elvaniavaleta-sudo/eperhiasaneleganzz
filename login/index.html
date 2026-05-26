@@ -5,7 +5,7 @@
 	<meta name="author" content="Muhamad Nauval Azhar">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="description" content="This is a login page template based on Bootstrap 5">
-	<title>Bootstrap 5 Login Page</title>
+	<title>Log in semar palace!</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 
@@ -20,12 +20,15 @@
 					<div class="card shadow-lg">
 						<div class="card-body p-5">
 							<h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
-							<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+							
+							<!-- Tambah id="loginForm" sesuai instruksi guru -->
+							<form id="loginForm" method="POST" class="needs-validation" novalidate="" autocomplete="off">
 								<div class="mb-3">
-									<label class="mb-2 text-muted" for="email">E-Mail Address</label>
-									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+									<label class="mb-2 text-muted" for="username">Username id</label>
+									<!-- id="username" sudah sesuai -->
+									<input id="username" type="text" class="form-control" name="username" value="" required autofocus>
 									<div class="invalid-feedback">
-										Email is invalid
+										username is invalid
 									</div>
 								</div>
 
@@ -36,6 +39,7 @@
 											Forgot Password?
 										</a>
 									</div>
+									<!-- id="password" sudah sesuai -->
 									<input id="password" type="password" class="form-control" name="password" required>
 								    <div class="invalid-feedback">
 								    	Password is required
@@ -60,13 +64,23 @@
 						</div>
 					</div>
 					<div class="text-center mt-5 text-muted">
-						Copyright &copy; 2017-2021 &mdash; Your Company 
+						Copyright &copy; 2017-2029 &mdash; Your Company 
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+	
+	
+    <div id="alertBox" class="alert alert-danger" style="display:none; text-align: center; max-width: 400px; margin: 20px auto;"></div>
 
-	<script src="js/login.js"></script>
+
+<script src="js/login.js"></script>
+</body>
+</html>
+    </footer>
+
+    <script src="templatemo-maison-doree.js"></script>
+    <script src="login/js/welcome.js"></script>
 </body>
 </html>
